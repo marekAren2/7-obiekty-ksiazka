@@ -26,7 +26,7 @@ function iloscPrzeczytanych(tablica) {
   }
   return iloscPrzeczytanych;
 }
-//modyfikacja 
+//modyfikacja dla branch mainReplit
 
 let ksiazka1 = new Ksiazka('Wiedźmin', 'Andrzej Sapkowski', true);
 ksiazka1.opiszKsiazke
