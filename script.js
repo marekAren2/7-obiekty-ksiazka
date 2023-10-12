@@ -1,16 +1,65 @@
 
-const Ksiazka = function(tytul, autor, przeczytana) {
-  this.tytul = tytul;
-  this.autor = autor;
-  this.przeczytana = przeczytana;
-  this.opiszKsiazke = function() {
-    console.log(`Książka ma tytuł ${this.tytul}, autorem jest ${this.autor} i została ${this.przeczytana}`)
-  };
-};  
-ksiazka1 = new Ksiazka('Wiedźmin', 'Andrzej Sapkowski', true);
+// const Ksiazka = function(tytul, autor, przeczytana = false) {
+class Ksiazka  {
+    constructor (tytul, autor, przeczytana = false) {
+    this.tytul = tytul;
+    this.autor = autor;
+    this.przeczytana = przeczytana;
+    }
+    // this.opiszKsiazke = function() {
+    opiszKsiazke() {
+    console.log(`Książka ma tytuł ${this.tytul}, autorem jest ${this.autor}`)
+    if (this.przeczytana === true) {
+      console.log(`i została przeczytana`);
+    // } else { console.log(`i nie została przeczytana`); 
+      };
+    };
+};
 
+function iloscPrzeczytanych(tablica) {
+  let iloscPrzeczytanych = 0;
+  for (let i = 0; i < tablica.length; i++) {
+    // console.log('książka numer:' i+1) ;
+    tablica[i].opiszKsiazke();
+    if (tablica[i].przeczytana === true) {
+      iloscPrzeczytanych += 1;
+    }
+  }
+  return iloscPrzeczytanych;
+}
   
   
+let ksiazka1 = new Ksiazka('Wiedźmin', 'Andrzej Sapkowski', true);
+ksiazka1.opiszKsiazke();
+let ksiazka2 = new Ksiazka('Ania z Zielonego Wzgórza', 'Agatha Christie', false);
+ksiazka2.opiszKsiazke();
+let ksiazka3 = new Ksiazka('Leksykon z życia', 'Franz Kafka', false);
+ksiazka3.opiszKsiazke();
+
+
+let biblioteka = [ksiazka1, ksiazka2, ksiazka3];
+
+
+// console.log(biblioteka);
+console.log(biblioteka.length);
+
+for (i=0;i< biblioteka.length;i++) {
+  
+  console.log(biblioteka[i]);
+  biblioteka[i].opiszKsiazke();
+  
+} 
+
+iloscPrzeczytanych(biblioteka);
+
+console.log("🚀 ~ iloscPrzeczytanych(biblioteka):", iloscPrzeczytanych(biblioteka));
+
+
+// console.log(biblioteka[0]);
+
+// biblioteka.forEach(function(element, index) {
+  // console.log(element.opiszKsiazke());
+// }
 
 
 /* Napisz klasę "Ksiazka", która ma właściwości "tytul", "autor", "przeczytana" (przeczytana jest typu Boolean) oraz jedną metodę "opiszKsiazke", która zwraca stringa opisującego tą książkę wg. wzoru "Książka ma tytuł Wiedźmin, autorem jest Andrzej Sapkowski i została przeczytana.".
