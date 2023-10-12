@@ -11,7 +11,7 @@ class Ksiazka {
     if (this.przeczytana === true) {
       console.log(`i została przeczytana`);
     } else {
-      console.log(`i nie została przeczytana`);
+      // console.log(`i nie została przeczytana`);
     };
   };
 };
@@ -29,12 +29,11 @@ function iloscPrzeczytanych(tablica) {
 //modyfikacja dla branch mainReplit
 
 let ksiazka1 = new Ksiazka('Wiedźmin', 'Andrzej Sapkowski', true);
-ksiazka1.opiszKsiazke
-
+// ksiazka1.opiszKsiazke
 let ksiazka2 = new Ksiazka('Ania z Zielonego Wzgórza', 'Agatha Christie', false);
-ksiazka2.opiszKsiazke();
+// ksiazka2.opiszKsiazke();
 let ksiazka3 = new Ksiazka('Leksykon z życia', 'Franz Kafka', false);
-ksiazka3.opiszKsiazke();
+// ksiazka3.opiszKsiazke();
 
 
 let biblioteka = [ksiazka1, ksiazka2, ksiazka3];
@@ -42,15 +41,15 @@ let biblioteka = [ksiazka1, ksiazka2, ksiazka3];
 // console.log(biblioteka);
 console.log(biblioteka.length);
 
-for (i = 0; i < biblioteka.length; i++) {
+/* for (i = 0; i < biblioteka.length; i++) {
 
   console.log(biblioteka[i]);
   biblioteka[i].opiszKsiazke();
 
-}
+} */
 
-iloscPrzeczytanych(biblioteka);
-console.log(iloscPrzeczytanych(biblioteka));
+// iloscPrzeczytanych(biblioteka);
+console.log(`* liczba przeczytanych książek : ${iloscPrzeczytanych(biblioteka)}`);
 
 // console.log(biblioteka[0]);
 
