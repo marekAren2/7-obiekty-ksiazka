@@ -5,16 +5,17 @@ class Ksiazka {
     this.tytul = tytul;
     this.autor = autor;
     this.przeczytana = przeczytana;
-  };
+  }
+
   opiszKsiazke() {
     console.log(`Książka ma tytuł ${this.tytul}, autorem jest ${this.autor}`)
     if (this.przeczytana === true) {
       console.log(`i została przeczytana`);
     } else {
       // console.log(`i nie została przeczytana`);
-    };
-  };
-};
+    }
+  }
+}
 
 function iloscPrzeczytanych(tablica) {
   let iloscPrzeczytanych = 0;
